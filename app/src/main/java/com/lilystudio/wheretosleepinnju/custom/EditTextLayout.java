@@ -127,6 +127,10 @@ public class EditTextLayout extends LinearLayout {
         return this;
     }
 
+    public ImageView getIvClear(){
+        return mIvClear;
+    }
+
     @Override
     public void setOnClickListener(@Nullable final OnClickListener l) {
         super.setOnClickListener(l);

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_time"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
@@ -14,14 +15,14 @@
     tools:showIn="@layout/activity_add">
 
 
-    <com.lilystudio.wheretosleepinnju.custom.EditTextLayout
-        android:id="@+id/etl_time"
-        app:hintColor="@color/color_gary_40"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:hint="选择上课时间"
-        app:textColor="@color/secondary_text"
-        app:icon="@drawable/ic_svg_week"
-        app:input_enabled="false"/>
+<!--    <com.lilystudio.wheretosleepinnju.custom.EditTextLayout-->
+<!--        android:id="@+id/etl_time"-->
+<!--        app:hintColor="@color/color_gary_40"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:hint="选择上课时间"-->
+<!--        app:textColor="@color/secondary_text"-->
+<!--        app:icon="@drawable/ic_svg_week"-->
+<!--        app:input_enabled="false"/>-->
 
 </LinearLayout>

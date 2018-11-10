@@ -37,7 +37,7 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
     private AutoCompleteTextViewLayout mAtCompTVClassroom;
     private EditTextLayout mEtlTeacher;
     private LinearLayout mLLTime;
-    private Button mBtnAddTimeInterval;
+    private Button mBtnAddTimeSlot;
     private EditTextLayout mEtlTime;
     private EditTextLayout mEtlWeekRange;
 
@@ -114,16 +114,16 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
 
         mEtlTeacher = findViewById(R.id.etl_teacher);
         mLLTime=findViewById(R.id.ll_time);
-        addTimeInterval();
+        addTimeSlot();
 //        mEtlTime = findViewById(R.id.etl_time);
         mEtlWeekRange = findViewById(R.id.etl_week_range);
-        mBtnAddTimeInterval =findViewById(R.id.btn_add_time_interval);
+        mBtnAddTimeSlot =findViewById(R.id.btn_add_time_slot);
 
         mBtnRemove = findViewById(R.id.btn_remove);
 
 //        mEtlTime.setOnClickListener(this);
         mEtlWeekRange.setOnClickListener(this);
-        mBtnAddTimeInterval.setOnClickListener(this);
+        mBtnAddTimeSlot.setOnClickListener(this);
 
         mBtnRemove.setOnClickListener(this);
     }
@@ -237,8 +237,8 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
             case R.id.etl_week_range:
                 rangeAction();
                 break;
-            case R.id.btn_add_time_interval:
-                addTimeInterval();
+            case R.id.btn_add_time_slot:
+                addTimeSlot();
                 break;
             case R.id.btn_remove:
                 remove();
@@ -246,8 +246,8 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
         }
     }
 
-    private void addTimeInterval() {
-        View timeIntervalView=View.inflate(this,R.layout.layout_time_interval,null);
+    private void addTimeSlot() {
+        View timeIntervalView=View.inflate(this,R.layout.layout_time_slot,null);
         mEtlTime=timeIntervalView.findViewById(R.id.etl_time);
         mEtlTime.setOnClickListener(this);
         if(mLLTime.getChildCount()!=0){

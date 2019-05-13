@@ -24,8 +24,8 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 # javabean
--keep  class com.mnnyang.gzuclassschedule.data.beanv2.**{*;}
--keep  class com.mnnyang.gzuclassschedule.data.greendao.**{*;}
+-keep  class com.lilystudio.wheretosleepinnju.data.beanv2.**{*;}
+-keep  class com.lilystudio.wheretosleepinnju.data.greendao.**{*;}
 
 # jsoup
 -dontwarn org.jsoup.**

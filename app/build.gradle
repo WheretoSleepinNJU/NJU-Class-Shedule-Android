@@ -5,7 +5,7 @@ apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion compile_sdk_version
     defaultConfig {
-        applicationId "com.mnnyang.gzuclassschedule"
+        applicationId "com.lilystudio.wheretosleepinnju"
         minSdkVersion 21
         targetSdkVersion compile_sdk_version
         versionCode version_code
@@ -36,7 +36,7 @@ android {
 
 greendao {
     schemaVersion 1
-    daoPackage 'com.mnnyang.gzuclassschedule.data.greendao'//greenDao 自动生成的代码保存的包名
+    daoPackage 'com.lilystudio.wheretosleepinnju.data.greendao'//greenDao 自动生成的代码保存的包名
     targetGenDir 'src/main/java' //自动生成的代码存储的路径，默认是 build/generated/source/greendao.
     generateTests false //true的时候自动生成测试单元
 //    targetGenDirTests: 测试单元的生成目录默认是 src/androidTest/java

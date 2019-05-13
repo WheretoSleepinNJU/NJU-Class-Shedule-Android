@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.mnnyang.gzuclassschedule.custom.RippleLayout
+            <com.lilystudio.wheretosleepinnju.custom.RippleLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -62,7 +62,7 @@
                     android:text="@string/check_update"
                     android:textColor="@color/white_f1"
                     android:textSize="12sp" />
-            </com.mnnyang.gzuclassschedule.custom.RippleLayout>
+            </com.lilystudio.wheretosleepinnju.custom.RippleLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="@string/github_gzuclassschedule"
+                    android:text="@string/github_njuclassschedule"
                     android:textColor="@color/primary_text"
                     android:textIsSelectable="true" />
 

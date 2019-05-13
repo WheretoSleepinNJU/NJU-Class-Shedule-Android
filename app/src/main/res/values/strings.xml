@@ -1,16 +1,19 @@
 <resources>
     <string name="app_name">MD课表</string>
     <string name="app_version">2.0.0</string>
+    <string name="app_LTS">0.2.3 (LTS)</string>
 
     <string name="qq_number">776310072</string>
 
     <string name="user_add">手动添加</string>
-    <string name="import_gzu">导入正方课表</string>
+    <string name="import_nju">导入南京大学课表</string>
     <string name="kb_manage">课表管理</string>
     <string name="del_all">删除全部</string>
 
     <string name="default_noon_node">4</string>
     <string name="default_course_name">默认课表</string>
+
+    <string name="app_preference_hide_fab">hide_fab</string>
 
     <string name="app_preference_app_is_first_start">app_is_first_start_v2</string>
     <string name="app_preference_start_week_begin_millis">start_week_begin_date</string>
@@ -33,6 +36,7 @@
     <string name="feedback">反馈</string>
     <string name="please_wait_a_moment">请稍等…</string>
     <string name="qq_not_installed">抱歉，您没有安装QQ！</string>
+    <string name="alipay_not_installed">抱歉，您没有安装支付宝！</string>
     <string name="string_course_time_2"> %1$s&#160;&#160;%2$d 节</string>
     <string name="string_week_range">第%1$d-%2$d 周</string>
     <string name="show_noon_course">显示中午课程</string>
@@ -47,6 +51,8 @@
     <string name="theme_preference">颜色风格</string>
     <string name="now_version">有新版本</string>
     <string name="about">关于</string>
+    <string name="donate">投喂</string>
+
 
     <string name="github_lib">com.android.support:design
     \ncom.android.support:appcompat-v7
@@ -65,7 +71,7 @@
     \ncom.github.didikee:AndroidDonate</string>
     <string name="blog_xxyangyoulin">博&#160;&#160;客：http://xxyangyoulin.cn/</string>
     <string name="blog_xxyangyoulin_url">http://xxyangyoulin.cn/</string>
-    <string name="github_gzuclassschedule">https://github.com/mnnyang/gzuclassschedule/</string>
+    <string name="github_njuclassschedule">https://github.com/mnnyang/njuclassschedule/</string>
 
     <string name="check_update">检查更新</string>
     <string name="update_succeed">更新成功</string>
@@ -79,11 +85,12 @@
     <string name="edit_succeed">修改成功</string>
     <string name="course_name_already_exists">课表名称已经存在</string>
     <string name="user_add_summary">手动添加课程表数据</string>
-    <string name="import_gzu_description">登录正方教务系统导入课程表</string>
+    <string name="import_nju_description">登录南京大学教务系统导入课程表</string>
     <string name="kb_manage_description">增加或删除课表数据</string>
     <string name="more_pref">更多选择</string>
     <string name="more_pref_summary">自定义其他参数</string>
     <string name="feedback_summary">通过QQ反馈意见</string>
+    <string name="donate_summary">给傻翠买支棒棒糖吧！</string>
     <string name="checking_for_updates">检查更新中…</string>
     <string name="already_the_latest_version">已是最新版本</string>
     <string name="access_err">抱歉，访问出错</string>
@@ -100,13 +107,13 @@
     <string name="bg_enabled">已启用背景</string>
     <string name="bg_disabled">已禁用背景</string>
     <string name="select_iamge_succeed">设置背景成功</string>
-    <string name="gzu">贵州大学</string>
+    <string name="nju">贵州大学</string>
     <string name="other_school">其他高校</string>
     <string name="school">学校</string>
     <string name="please_input_school_url">请输入教务管理系统网址</string>
     <string name="can_not_be_empty">不能为空</string>
     <string name="class_schedule">课程表</string>
     <string name="app_preference_url_school">url_school</string>
-    <string name="alipay_qr_code">fkx0201809rfs0hvrukmg80</string>
+    <string name="alipay_qr_code">FKX00710CQCHIHK4B9CA31</string>
     <string name="about_email">Email：xxyangyoulin@gmail.com</string>
 </resources>

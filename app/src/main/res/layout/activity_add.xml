@@ -41,7 +41,7 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <com.mnnyang.gzuclassschedule.custom.EditTextLayout
+                <com.lilystudio.wheretosleepinnju.custom.EditTextLayout
                     android:id="@+id/etl_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                     android:layout_height="1px"
                     android:background="#20000000" />
 
-                <com.mnnyang.gzuclassschedule.custom.EditTextLayout
+                <com.lilystudio.wheretosleepinnju.custom.EditTextLayout
                     android:id="@+id/etl_teacher"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -27,7 +27,7 @@
 - v1.3.2  
     解决同一课表不同周数提示冲突的问题。  
 
-#### **酷安上架 [前往下载](https://www.coolapk.com/apk/com.mnnyang.gzuclassschedule)**
+#### **酷安上架 [前往下载](https://www.coolapk.com/apk/com.lilystudio.wheretosleepinnju)**
 
 #### 截图预览
 

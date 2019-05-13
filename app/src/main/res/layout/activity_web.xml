@@ -36,7 +36,7 @@
 
         </LinearLayout>
 
-        <com.mnnyang.gzuclassschedule.custom.SmoothProgress
+        <com.lilystudio.wheretosleepinnju.custom.SmoothProgress
             android:id="@+id/smooth_progress"
             android:layout_width="match_parent"
             android:layout_height="2dp" />

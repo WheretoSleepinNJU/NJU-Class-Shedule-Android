@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lilystudio.wheretosleepinnju.course.CourseActivity">
+    tools:context=".mvp.course.CourseActivity">
 
     <include layout="@layout/title_toolbar" />
 
-    <ImageView
-        android:id="@+id/iv_background"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_select_week"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/layout_week_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:alpha="0.8"
-        android:scaleType="centerCrop" />
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbarSize="0dp"
+        android:scrollbars="none">
 
-    <com.lilystudio.wheretosleepinnju.custom.course.CourseView
-        android:id="@+id/course_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:paddingEnd="8dp"
-        android:paddingStart="4dp" />
+        <LinearLayout
+            android:id="@+id/layout_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_svg_add" />
+            <LinearLayout
+                android:id="@+id/layout_node_group"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
 
-</android.support.design.widget.CoordinatorLayout>
+            <com.mnnyang.gzuclassschedule.custom.course.CourseView
+                android:id="@+id/course_view_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -7,12 +7,13 @@ import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
+import com.lilystudio.wheretosleepinnju.R;
 import com.lilystudio.wheretosleepinnju.utils.Preferences;
 import com.lilystudio.wheretosleepinnju.utils.ScreenUtils;
 import com.lilystudio.wheretosleepinnju.utils.ToastUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.log.LoggerInterceptor;
-
+import com.tencent.bugly.Bugly;
 import okhttp3.OkHttpClient;
 
 /**
@@ -52,6 +53,7 @@ public class app extends Application {
     }
 
     private void initUtils() {
+        Bugly.init(mContext, getString(R.string.bugly_appid), false);
         ToastUtils.init(mContext);
         Preferences.init(mContext);
         ScreenUtils.init(mContext);

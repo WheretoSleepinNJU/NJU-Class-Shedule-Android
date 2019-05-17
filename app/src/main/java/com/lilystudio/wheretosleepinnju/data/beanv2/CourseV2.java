@@ -25,6 +25,11 @@ public class CourseV2 extends CourseAncestor {
 
     private String couAllWeek;
 
+//    private int couImptType; // 课程添加类型：0 手动导入 1 自动导入
+//
+//    private String couTestTime; // 课程考试时间
+//    private String couTestPlace; // 课程考试时间
+
     private Integer couColor;
 
     private Long couCgId;
@@ -218,6 +223,34 @@ public class CourseV2 extends CourseAncestor {
         this.couAllWeek = couAllWeek;
         return this;
     }
+
+//    public String getCouTestTime() {
+//        return couTestTime;
+//    }
+//
+//    public CourseV2 setCouTestTime(String couTestTime) {
+//        this.couTestTime = couTestTime;
+//        return this;
+//    }
+//
+//    public String getCouTestPlace() {
+//        return couTestPlace;
+//    }
+//
+//    public CourseV2 setCouTestPlace(String couTestPlace) {
+//        this.couTestPlace = couTestPlace;
+//        return this;
+//    }
+//
+//    public int getCouImptType() {
+//        return couImptType;
+//    }
+//
+//    public CourseV2 setCouImptType(int couImptType) {
+//        this.couImptType = couImptType;
+//        return this;
+//    }
+
 
     public Integer getCouColor() {
         return couColor;

@@ -32,7 +32,7 @@ public class PopupWindowDialog implements View.OnClickListener {
     private View mBtnWeekAll;
     private View mBtnWeekSingle;
     private View mBtnWeekDouble;
-    private static final Integer MAX_WEEK = 25;
+    private static final Integer MAX_WEEK = 16;
     private TextInputEditText mEtLocation;
 
 

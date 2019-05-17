@@ -29,7 +29,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/ic_launcher_round" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -159,8 +159,17 @@
                     android:layout_marginLeft="4dp"
                     android:text="@string/github_lib"
                     android:textColor="@color/primary_text" />
-
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="16dp"
+                android:text="感谢小百合工作室\n感谢 @ns @lgt 协助开发\n感谢 @无忌 提供配色方案\n感谢各位提供反馈的NJUers\n谨以此APP送给我的女朋友子枨"
+                android:textColor="@color/secondary_text" />
 
         </LinearLayout>
     </ScrollView>

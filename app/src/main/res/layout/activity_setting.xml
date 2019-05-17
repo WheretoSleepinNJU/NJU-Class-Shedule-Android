@@ -64,14 +64,14 @@
                 style="@style/CategoryStyle"
                 android:text="@string/text_preference" />
 
-            <com.lilystudio.wheretosleepinnju.custom.settting.SettingItemNormal
-                android:id="@+id/sin_hide_fab"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:detach="true"
-                app:item_title="@string/hide_fab"
-                app:showSwitch="true"
-                app:summary="@string/hide_fab_summary" />
+            <!--<com.lilystudio.wheretosleepinnju.custom.settting.SettingItemNormal-->
+                <!--android:id="@+id/sin_hide_fab"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:detach="true"-->
+                <!--app:item_title="@string/hide_fab"-->
+                <!--app:showSwitch="true"-->
+                <!--app:summary="@string/hide_fab_summary" />-->
 
             <View
                 android:layout_width="match_parent"

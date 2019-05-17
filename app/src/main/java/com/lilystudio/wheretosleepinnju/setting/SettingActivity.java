@@ -44,7 +44,7 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
     private SettingItemNormal sinImportNju;
     private SettingItemNormal sinKbManage;
 
-    private SettingItemNormal sinHideFab;
+//    private SettingItemNormal sinHideFab;
     private SettingItemNormal sinMorePref;
     private SettingItemNormal sinFeedback;
     private SettingItemNormal sinDonate;
@@ -73,7 +73,7 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
         sinImportNju = findViewById(R.id.sin_import_nju);
         sinKbManage = findViewById(R.id.sin_kb_manage);
 
-        sinHideFab = findViewById(R.id.sin_hide_fab);
+//        sinHideFab = findViewById(R.id.sin_hide_fab);
         sinMorePref = findViewById(R.id.sin_more_pref);
         sinFeedback = findViewById(R.id.sin_feedback);
         sinDonate = findViewById(R.id.sin_donate);
@@ -83,7 +83,7 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
         sinImportNju.setSettingOnClickListener(this);
         sinKbManage.setSettingOnClickListener(this);
 
-        sinHideFab.setSettingOnClickListener(this);
+//        sinHideFab.setSettingOnClickListener(this);
         sinMorePref.setSettingOnClickListener(this);
         sinFeedback.setSettingOnClickListener(this);
         sinDonate.setSettingOnClickListener(this);
@@ -99,9 +99,9 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
 
     private void initDefaultValues() {
 
-        sinHideFab.setChecked(PreferenceManager
-                .getDefaultSharedPreferences(getBaseContext())
-                .getBoolean(getString(R.string.app_preference_hide_fab),false));
+//        sinHideFab.setChecked(PreferenceManager
+//                .getDefaultSharedPreferences(getBaseContext())
+//                .getBoolean(getString(R.string.app_preference_hide_fab),false));
 //                        true));
     }
 
@@ -121,9 +121,9 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
                 gotoMgActivity();
                 break;
 
-            case R.id.sin_hide_fab:
-                hideFabPref(checked);
-                break;
+//            case R.id.sin_hide_fab:
+//                hideFabPref(checked);
+//                break;
 
             case R.id.sin_more_pref:
                 gotoConfActivity();
@@ -146,13 +146,13 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
 
     @Override
     public void onCheckedChanged(View view, boolean checked) {
-        switch (view.getId()) {
-            case R.id.sin_hide_fab:
-                hideFabPref(checked);
-                break;
-            default:
-                break;
-        }
+//        switch (view.getId()) {
+//            case R.id.sin_hide_fab:
+//                hideFabPref(checked);
+//                break;
+//            default:
+//                break;
+//        }
     }
 
     int theme;
@@ -207,11 +207,11 @@ public class SettingActivity extends BaseActivity implements SettingContract.Vie
     }
 
     private void hideFabPref(boolean checked) {
-        PreferenceManager
-                .getDefaultSharedPreferences(getBaseContext())
-                .edit()
-//                .putBoolean(getString(R.string.app_preference_hide_fab), checked)
-                .apply();
+//        PreferenceManager
+//                .getDefaultSharedPreferences(getBaseContext())
+//                .edit()
+////                .putBoolean(getString(R.string.app_preference_hide_fab), checked)
+//                .apply();
 
 //        notifiUpdateMainPage(Constant.INTENT_UPDATE_TYPE_OTHER);
     }

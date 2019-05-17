@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:gravity="center"
     android:layout_height="match_parent"
-    android:background="@drawable/ripple_select_week_item"
+    android:background="?android:attr/colorPrimary"
     android:paddingBottom="12dp"
     android:paddingLeft="@dimen/margin_8dp"
     android:paddingRight="@dimen/margin_8dp"

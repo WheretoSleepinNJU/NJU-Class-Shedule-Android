@@ -123,7 +123,7 @@ public class CourseActivity extends BaseActivity implements CourseContract.View,
         mRvSelectWeek.setLayoutManager(new LinearLayoutManager(getApplicationContext(),
                 RecyclerView.HORIZONTAL, false));
         ArrayList<String> strings = new ArrayList<>();
-        for (int i = 1; i <= 25; i++) {
+        for (int i = 1; i <= 16; i++) {
             strings.add("第" + i + "周");
         }
         SelectWeekAdapter selectWeekAdapter = new SelectWeekAdapter(R.layout.adapter_select_week, strings);

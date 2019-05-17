@@ -50,18 +50,9 @@ public class AboutActivity extends BaseActivity implements AboutContract.View {
         initBackToolbar(getString(R.string.about));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_about, menu);
-        return true;
-    }
-
     private void initVersionName() {
         TextView tvVersionName = findViewById(R.id.tv_version);
-
-        VersionUpdate vu = new VersionUpdate();
-        String versionName = vu.getLocalVersionName(app.mContext);
-        tvVersionName.setText(versionName);
+        tvVersionName.setText(R.string.app_LTS);
     }
 
     private void initCheckUpdate() {
@@ -95,85 +86,82 @@ public class AboutActivity extends BaseActivity implements AboutContract.View {
     }
 
 
-    @Override
-    public void showMassage(String notice) {
-        ToastUtils.show(notice);
-    }
-
-    @Override
-    public void showUpdateVersionInfo(VersionWrapper.Version version) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                .setTitle("有新版本")
-                .setMessage(version.getDescribe())
-                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                }).setPositiveButton("更新", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            VersionUpdate.goToMarket(getBaseContext());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            Intent intent = new Intent(AboutActivity.this, Html5Activity.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("url", Url.URL_UPDATE_WEB);
-                            bundle.putString("title", "MD课表");
-                            intent.putExtra("bundle", bundle);
-                            startActivity(intent);
-                        }
-                    }
-                });
-
-        builder.show();
-    }
-
+//    @Override
+//    public void showMassage(String notice) {
+//        ToastUtils.show(notice);
+//    }
+//
+//    @Override
+//    public void showUpdateVersionInfo(VersionWrapper.Version version) {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+//                .setTitle("有新版本")
+//                .setMessage(version.getDescribe())
+//                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                }).setPositiveButton("更新", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        try {
+//                            VersionUpdate.goToMarket(getBaseContext());
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                            Intent intent = new Intent(AboutActivity.this, Html5Activity.class);
+//                            Bundle bundle = new Bundle();
+//                            bundle.putString("url", Url.URL_UPDATE_WEB);
+//                            bundle.putString("title", "MD课表");
+//                            intent.putExtra("bundle", bundle);
+//                            startActivity(intent);
+//                        }
+//                    }
+//                });
+//
+//        builder.show();
+//    }
+//
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.action_donate:
-                donate();
-                break;
         }
         return super.onOptionsItemSelected(item);
     }
-
-    private void donate() {
-        View view = View.inflate(this, R.layout.dialog_donate, null);
-        view.setBackgroundColor(getResources().getColor(R.color.white));
-        final Dialog dialog = new DialogHelper().buildBottomDialog(this, view);
-
-        view.findViewById(R.id.iv_alipay).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                new Donate().donateAlipay(AboutActivity.this);
-            }
-        });
-        view.findViewById(R.id.iv_wechat).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                new Donate().donateWeixinRemind(AboutActivity.this);
-            }
-        });
-
-        dialog.show();
-    }
-
-    /**
-     * 捐献权限
-     */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        RequestPermission.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
+//
+//    private void donate() {
+//        View view = View.inflate(this, R.layout.dialog_donate, null);
+//        view.setBackgroundColor(getResources().getColor(R.color.white));
+//        final Dialog dialog = new DialogHelper().buildBottomDialog(this, view);
+//
+//        view.findViewById(R.id.iv_alipay).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//                new Donate().donateAlipay(AboutActivity.this);
+//            }
+//        });
+//        view.findViewById(R.id.iv_wechat).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//                new Donate().donateWeixinRemind(AboutActivity.this);
+//            }
+//        });
+//
+//        dialog.show();
+//    }
+//
+//    /**
+//     * 捐献权限
+//     */
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        RequestPermission.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//    }
 
     @Override
     public void setPresenter(AboutContract.Presenter presenter) {

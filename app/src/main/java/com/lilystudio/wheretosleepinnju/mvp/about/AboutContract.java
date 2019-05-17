@@ -14,7 +14,5 @@ public interface AboutContract {
     }
 
     interface View extends BaseView<AboutContract.Presenter> {
-        void showMassage(String notice);
-        void showUpdateVersionInfo(VersionWrapper.Version version);
     }
 }

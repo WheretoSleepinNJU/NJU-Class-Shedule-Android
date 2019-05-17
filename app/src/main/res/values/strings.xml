@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">南哪课表</string>
-    <string name="app_version">0.2.3</string>
-    <string name="app_LTS">0.2.3 (LTS)</string>
+    <string name="app_version">0.3.0</string>
+    <string name="app_LTS">0.3.0 (Beta)</string>
+    <string name="bugly_appid">1736b669d7</string>
 
     <string name="qq_number">1455169173</string>
 
@@ -70,7 +71,7 @@
     \ncom.github.yuzhiqiang1993:zxing
     \ncom.github.franmontiel:PersistentCookieJar
     \ncom.github.didikee:AndroidDonate</string>
-    <string name="blog_xxyangyoulin">博&#160;&#160;客：https://idealclover.top/</string>
+    <string name="blog_xxyangyoulin">博客：https://idealclover.top/</string>
     <string name="blog_xxyangyoulin_url">https://idealclover.top/</string>
     <string name="github_njuclassschedule">https://github.com/idealclover/NJU-Class-Shedule-Android</string>
 
@@ -92,6 +93,7 @@
     <string name="more_pref_summary">自定义其他参数</string>
     <string name="feedback_summary">通过QQ反馈意见</string>
     <string name="donate_summary">给傻翠买支棒棒糖吧！</string>
+    <string name="donate_list">投喂名单链接</string>
     <string name="checking_for_updates">检查更新中…</string>
     <string name="already_the_latest_version">已是最新版本</string>
     <string name="access_err">抱歉，访问出错</string>

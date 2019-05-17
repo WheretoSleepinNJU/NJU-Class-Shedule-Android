@@ -1,4 +1,5 @@
 package com.lilystudio.wheretosleepinnju.mvp.about;
+import com.tencent.bugly.beta.Beta;
 
 import com.lilystudio.wheretosleepinnju.R;
 import com.lilystudio.wheretosleepinnju.app.app;
@@ -27,49 +28,50 @@ public class AboutPresenter implements AboutContract.Presenter {
 
     @Override
     public void checkUpdate() {
-        if (mView == null) {
-            //view被销毁
-            return;
-        }
-        mView.showMassage(app.mContext.getString(R.string.checking_for_updates));
-
-        final VersionUpdate versionUpdate = new VersionUpdate();
-        versionUpdate.checkUpdate(new HttpCallback<VersionWrapper>() {
-            @Override
-            public void onSuccess(VersionWrapper versionWrapper) {
-                if (mView == null) {
-                    //view被销毁
-                    return;
-                }
-                if (versionWrapper == null || versionWrapper.getData() == null) {
-                    mView.showMassage("返回数据为空");
-                    return;
-                }
-
-                if (versionWrapper.getCode() != 1) {
-                    mView.showMassage(versionWrapper.getMsg());
-                    return;
-                }
-
-                int localVersion = versionUpdate.getLocalVersion(app.mContext);
-
-                if (versionWrapper.getData().getCode() > localVersion) {
-                    mView.showUpdateVersionInfo(versionWrapper.getData());
-                } else {
-                    mView.showMassage(app.mContext.getString(R.string.already_the_latest_version));
-                }
-            }
-
-            @Override
-            public void onFail(String errMsg) {
-                if (mView == null) {
-                    //view被销毁
-                    return;
-                }
-                LogUtil.e(this, errMsg);
-                ToastUtils.show(app.mContext.getString(R.string.access_err));
-            }
-        });
+        Beta.checkUpgrade();
+//        if (mView == null) {
+//            //view被销毁
+//            return;
+//        }
+//        mView.showMassage(app.mContext.getString(R.string.checking_for_updates));
+//
+//        final VersionUpdate versionUpdate = new VersionUpdate();
+//        versionUpdate.checkUpdate(new HttpCallback<VersionWrapper>() {
+//            @Override
+//            public void onSuccess(VersionWrapper versionWrapper) {
+//                if (mView == null) {
+//                    //view被销毁
+//                    return;
+//                }
+//                if (versionWrapper == null || versionWrapper.getData() == null) {
+//                    mView.showMassage("返回数据为空");
+//                    return;
+//                }
+//
+//                if (versionWrapper.getCode() != 1) {
+//                    mView.showMassage(versionWrapper.getMsg());
+//                    return;
+//                }
+//
+//                int localVersion = versionUpdate.getLocalVersion(app.mContext);
+//
+//                if (versionWrapper.getData().getCode() > localVersion) {
+//                    mView.showUpdateVersionInfo(versionWrapper.getData());
+//                } else {
+//                    mView.showMassage(app.mContext.getString(R.string.already_the_latest_version));
+//                }
+//            }
+//
+//            @Override
+//            public void onFail(String errMsg) {
+//                if (mView == null) {
+//                    //view被销毁
+//                    return;
+//                }
+//                LogUtil.e(this, errMsg);
+//                ToastUtils.show(app.mContext.getString(R.string.access_err));
+//            }
+//        });
     }
 
     @Override

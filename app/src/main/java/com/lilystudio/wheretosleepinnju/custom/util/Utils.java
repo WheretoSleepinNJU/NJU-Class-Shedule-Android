@@ -69,6 +69,14 @@ public class Utils {
     }
     private static Random random = new Random();
 
+    public static int[] getColorList() {
+        return colorList;
+    }
+
+    public static int[] getDarkColorList() {
+        return darkColorList;
+    }
+
     public static int getRandomColor() {
         return colorList[random.nextInt(20) % colorList.length];
     }

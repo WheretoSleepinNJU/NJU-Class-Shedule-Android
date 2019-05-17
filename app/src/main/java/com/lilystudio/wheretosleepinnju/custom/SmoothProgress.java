@@ -41,7 +41,7 @@ public class SmoothProgress extends View {
 
     private void init() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(getResources().getColor(R.color.accent_green));
+        mPaint.setColor(getResources().getColor(R.color.accent_nanjing_blue));
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 

@@ -158,26 +158,26 @@ public class ImptActivity extends BaseActivity implements
 
     String selectedTime, selectedTerm;
 
-    @Override
-    public void showCourseTimeDialog(CourseTime ct) {
-        new ShowTermDialog().showSelectTimeTermDialog(this,
-                ct.years.toArray(new String[0]), new ShowTermDialog.TimeTermCallback() {
-                    @Override
-                    public void onTimeChanged(String time) {
-                        selectedTime = time;
-                    }
-
-                    @Override
-                    public void onTermChanged(String term) {
-                        selectedTerm = term;
-                    }
-
-                    @Override
-                    public void onPositive(DialogInterface dialog, int which) {
-                        mPresenter.importCustomCourses(selectedTime, selectedTerm);
-                    }
-                });
-    }
+//    @Override
+//    public void showCourseTimeDialog(CourseTime ct) {
+//        new ShowTermDialog().showSelectTimeTermDialog(this,
+//                ct.years.toArray(new String[0]), new ShowTermDialog.TimeTermCallback() {
+//                    @Override
+//                    public void onTimeChanged(String time) {
+//                        selectedTime = time;
+//                    }
+//
+//                    @Override
+//                    public void onTermChanged(String term) {
+//                        selectedTerm = term;
+//                    }
+//
+//                    @Override
+//                    public void onPositive(DialogInterface dialog, int which) {
+////                        mPresenter.importCustomCourses(selectedTime, selectedTerm);
+//                    }
+//                });
+//    }
 
     @Override
     public void onClick(View v) {

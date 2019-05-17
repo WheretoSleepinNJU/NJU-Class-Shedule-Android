@@ -64,7 +64,7 @@ public class PopupWindowDialog implements View.OnClickListener {
             weeks.add(Constant.WEEK[i]);
         }
 
-        int maxNode = 16;
+        int maxNode = 12;
         for (int i = 1; i <= maxNode; i++) {
             nodes.add("第" + i + "节");
         }

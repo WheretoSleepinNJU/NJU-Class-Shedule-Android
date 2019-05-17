@@ -55,37 +55,37 @@ public class ImptPresenter implements ImptContract.Presenter {
     }
 
 
-    @Override
-    public void importCustomCourses(final String year, final String term) {
-        LogUtil.d(this, "importCustomCourses");
-        LogUtil.d(this, "sy" + mSelectYear + "st" + mSelectTerm + "y" + year + "t" + term);
-        if (year.equals(mSelectYear) && term.equals(mSelectTerm)) {
-            importDefaultCourses(year, term);
-            return;
-        }
-
-        mImptView.showImpting();
-        EduHttpUtils.newInstance().toImpt(mSchoolUrl, xh, year, term, new HttpCallback<String>() {
-            @Override
-            public void onSuccess(String s) {
-                if (mImptView == null) {
-                    //view被销毁
-                    return;
-                }
-                parseCoursesHtmlToDb(s, year + "-" + term);
-            }
-
-            @Override
-            public void onFail(String errMsg) {
-                if (mImptView == null) {
-                    //view被销毁
-                    return;
-                }
-                mImptView.hideImpting();
-                mImptView.showErrToast(errMsg, true);
-            }
-        });
-    }
+//    @Override
+//    public void importCustomCourses(final String year, final String term) {
+//        LogUtil.d(this, "importCustomCourses");
+//        LogUtil.d(this, "sy" + mSelectYear + "st" + mSelectTerm + "y" + year + "t" + term);
+//        if (year.equals(mSelectYear) && term.equals(mSelectTerm)) {
+//            importDefaultCourses(year, term);
+//            return;
+//        }
+//
+//        mImptView.showImpting();
+//        EduHttpUtils.newInstance().toImpt(mSchoolUrl, xh, year, term, new HttpCallback<String>() {
+//            @Override
+//            public void onSuccess(String s) {
+//                if (mImptView == null) {
+//                    //view被销毁
+//                    return;
+//                }
+//                parseCoursesHtmlToDb(s, year + "-" + term);
+//            }
+//
+//            @Override
+//            public void onFail(String errMsg) {
+//                if (mImptView == null) {
+//                    //view被销毁
+//                    return;
+//                }
+//                mImptView.hideImpting();
+//                mImptView.showErrToast(errMsg, true);
+//            }
+//        });
+//    }
 
     @Override
     public void importDefaultCourses(final String year, final String term) {
@@ -136,7 +136,10 @@ public class ImptPresenter implements ImptContract.Presenter {
         }
         mSelectYear = ct.selectYear;
         mSelectTerm = ct.selectTerm;
-        mImptView.showCourseTimeDialog(ct);
+//        mImptView.showCourseTimeDialog(ct);
+        importDefaultCourses(mSelectYear,mSelectTerm);
+//        importCustomCourses(mSelectedTime, mSelectedTerm);
+
     }
 
     private void parseCoursesHtmlToDb(final String html, final String courseTimeTerm) {

@@ -54,6 +54,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.lilystudio.wheretosleepinnju.utils.ScreenUtils.dp2px;
@@ -80,6 +81,10 @@ public class CourseActivity extends BaseActivity implements CourseContract.View,
     private int mHeightSelectWeek;
     private boolean mSelectWeekIsShow = false;
     private LinearLayout mLayoutCourse;
+    /**
+     * 颜色透明度
+     */
+    private int mAlpha = 0xFF000000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -419,6 +424,21 @@ public class CourseActivity extends BaseActivity implements CourseContract.View,
         startActivity(new Intent(this, MgActivity.class));
     }
 
+    HashMap<String, Integer> mNameColorMap = new HashMap<>();
+
+    private void setCourseItemViewColor(CourseV2 course) {
+        Integer integer = mNameColorMap.get(course.getCouName());
+        if (integer == null) {
+            int size = mNameColorMap.size();
+            if (size >= Utils.getColorList().length - 2) {
+                size = size % (Utils.getColorList().length - 2);
+            }
+
+            mNameColorMap.put(course.getCouName(), Utils.getColorList()[size] + mAlpha);
+            mNameColorMap.put(course.getCouName() + "_p", Utils.getColorList()[size + 1] + mAlpha);
+        }
+    }
+
     @Override
     public void setCourseData(List<CourseV2> courses) {
         mCourseViewV2.clear();
@@ -427,10 +447,14 @@ public class CourseActivity extends BaseActivity implements CourseContract.View,
         LogUtil.d(this, "当前课程数：" + courses.size());
 
         for (CourseV2 course : courses) {
-            if (course.getCouColor() == null || course.getCouColor() == -1) {
-                course.setCouColor(Utils.getRandomColor());
-                courseV2Dao.update(course);
-            }
+//            if (course.getCouColor() == null || course.getCouColor() == -1) {
+//                course.setCouColor(Utils.getRandomColor());
+//                courseV2Dao.update(course);
+//            }
+            setCourseItemViewColor(course);
+            course.setCouColor(mNameColorMap.get(course.getCouName() + "_p"));
+//            course.setCouColor(Utils.getRandomColor());
+            courseV2Dao.update(course);
             course.init();
 
             LogUtil.e(this, "即将显示：" + course.toString());

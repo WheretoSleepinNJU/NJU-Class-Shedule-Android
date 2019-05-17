@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">MD课表</string>
-    <string name="app_version">2.0.0</string>
+    <string name="app_name">南哪课表</string>
+    <string name="app_version">0.2.3</string>
     <string name="app_LTS">0.2.3 (LTS)</string>
 
-    <string name="qq_number">776310072</string>
+    <string name="qq_number">1455169173</string>
 
     <string name="user_add">手动添加</string>
     <string name="import_nju">导入南京大学课表</string>
@@ -23,8 +23,9 @@
     <string name="app_preference_current_cs_name_id">current_sd_name_id</string>
 
 
-    <string name="captcha_err">验证码不正确</string>
+    <string name="captcha_err">验证码错误</string>
     <string name="pwd_err">密码错误</string>
+    <string name="timeout_err">验证码已过期</string>
     <string name="string_course_time">%1$s&#160;&#160;%2$d-%3$d 节</string>
     <string name="setting">设置</string>
     <string name="add_course">添加课程</string>
@@ -39,8 +40,8 @@
     <string name="alipay_not_installed">抱歉，您没有安装支付宝！</string>
     <string name="string_course_time_2"> %1$s&#160;&#160;%2$d 节</string>
     <string name="string_week_range">第%1$d-%2$d 周</string>
-    <string name="show_noon_course">显示中午课程</string>
-    <string name="show_noon_course_summary">显示中午时间的课程</string>
+    <!--<string name="show_noon_course">显示中午课程</string>-->
+    <!--<string name="show_noon_course_summary">显示中午时间的课程</string>-->
     <string name="hide_fab">隐藏添加按钮</string>
     <string name="hide_fab_summary">隐藏主界面右下角添加按钮</string>
     <string name="other">其他</string>
@@ -69,9 +70,9 @@
     \ncom.github.yuzhiqiang1993:zxing
     \ncom.github.franmontiel:PersistentCookieJar
     \ncom.github.didikee:AndroidDonate</string>
-    <string name="blog_xxyangyoulin">博&#160;&#160;客：http://xxyangyoulin.cn/</string>
-    <string name="blog_xxyangyoulin_url">http://xxyangyoulin.cn/</string>
-    <string name="github_njuclassschedule">https://github.com/mnnyang/njuclassschedule/</string>
+    <string name="blog_xxyangyoulin">博&#160;&#160;客：https://idealclover.top/</string>
+    <string name="blog_xxyangyoulin_url">https://idealclover.top/</string>
+    <string name="github_njuclassschedule">https://github.com/idealclover/NJU-Class-Shedule-Android</string>
 
     <string name="check_update">检查更新</string>
     <string name="update_succeed">更新成功</string>
@@ -115,5 +116,5 @@
     <string name="class_schedule">课程表</string>
     <string name="app_preference_url_school">url_school</string>
     <string name="alipay_qr_code">FKX00710CQCHIHK4B9CA31</string>
-    <string name="about_email">Email：xxyangyoulin@gmail.com</string>
+    <string name="about_email">Email：idealclover@163.com</string>
 </resources>

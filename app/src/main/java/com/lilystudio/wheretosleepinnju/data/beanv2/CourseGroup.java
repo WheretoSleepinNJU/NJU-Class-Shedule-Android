@@ -10,18 +10,6 @@ import java.util.List;
 import com.lilystudio.wheretosleepinnju.data.greendao.DaoSession;
 import com.lilystudio.wheretosleepinnju.data.greendao.CourseV2Dao;
 import com.lilystudio.wheretosleepinnju.data.greendao.CourseGroupDao;
-import com.lilystudio.wheretosleepinnju.data.greendao.DaoSession;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseV2Dao;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseGroupDao;
-import com.lilystudio.wheretosleepinnju.data.greendao.DaoSession;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseV2Dao;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseGroupDao;
-import com.lilystudio.wheretosleepinnju.data.greendao.DaoSession;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseV2Dao;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseGroupDao;
-import com.lilystudio.wheretosleepinnju.data.greendao.DaoSession;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseV2Dao;
-import com.lilystudio.wheretosleepinnju.data.greendao.CourseGroupDao;
 
 @Entity
 public class CourseGroup {

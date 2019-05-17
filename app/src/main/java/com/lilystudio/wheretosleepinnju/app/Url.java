@@ -54,10 +54,14 @@ public class Url {
     public static final String URL_UPDATE_WEB = URL_HOST;
 
     /**
-     * 贵州大学正方教务管理系统
+     * 南京大学正方教务管理系统
      */
     public static final String URL_NJU_HOST = "http://elite.nju.edu.cn/jiaowu/";
     public static final String CheckCode = "ValidateCode.jsp";
+    public static final String LoginUrl = "login.do";
+    public static final String ClassInfo = "student/teachinginfo/courseList.do?method=currentTermCourse";
+
+
     public static final String xskbcx = "xskbcx.aspx";
     public static final String default2 = "default2.aspx";
 
@@ -66,6 +70,6 @@ public class Url {
     public static final String PARAM_XQD = "xqd";
 
     public static final String __VIEWSTATE = "__VIEWSTATE";
-    public static String VIEWSTATE_POST_CODE = "";
-    public static String VIEWSTATE_LOGIN_CODE = "";
+//    public static String VIEWSTATE_POST_CODE = "";
+//    public static String VIEWSTATE_LOGIN_CODE = "";
 }

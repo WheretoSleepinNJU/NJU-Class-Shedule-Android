@@ -14,7 +14,7 @@ import com.lilystudio.wheretosleepinnju.data.bean.CourseTime;
 public interface ImptContract {
     interface Presenter extends BasePresenter {
 
-        void importCustomCourses(String courseTime, String term);
+//        void importCustomCourses(String courseTime, String term);
 
         void importDefaultCourses(String courseTime, String term);
 
@@ -36,7 +36,7 @@ public interface ImptContract {
 
         void showSucceed();
 
-        void showCourseTimeDialog(CourseTime times);
+//        void showCourseTimeDialog(CourseTime times);
     }
 
     interface Model {

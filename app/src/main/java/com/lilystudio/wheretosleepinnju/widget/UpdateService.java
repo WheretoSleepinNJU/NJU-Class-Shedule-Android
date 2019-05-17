@@ -27,7 +27,7 @@ import java.util.List;
 public class UpdateService extends RemoteViewsService {
 
     private List<CourseAncestor> mCourses;
-    private int maxNodeSize = 16;
+    private int maxNodeSize = 12;
     private int mCurrentWeek = 1;
 
     @Override
@@ -181,22 +181,22 @@ public class UpdateService extends RemoteViewsService {
                                 layout = R.layout.widget_cell_12;
                                 id = R.id.widget_cell_12;
                                 break;
-                            case 13:
-                                layout = R.layout.widget_cell_13;
-                                id = R.id.widget_cell_13;
-                                break;
-                            case 14:
-                                layout = R.layout.widget_cell_14;
-                                id = R.id.widget_cell_14;
-                                break;
-                            case 15:
-                                layout = R.layout.widget_cell_15;
-                                id = R.id.widget_cell_15;
-                                break;
-                            case 16:
-                                layout = R.layout.widget_cell_16;
-                                id = R.id.widget_cell_16;
-                                break;
+//                            case 13:
+//                                layout = R.layout.widget_cell_13;
+//                                id = R.id.widget_cell_13;
+//                                break;
+//                            case 14:
+//                                layout = R.layout.widget_cell_14;
+//                                id = R.id.widget_cell_14;
+//                                break;
+//                            case 15:
+//                                layout = R.layout.widget_cell_15;
+//                                id = R.id.widget_cell_15;
+//                                break;
+//                            case 16:
+//                                layout = R.layout.widget_cell_16;
+//                                id = R.id.widget_cell_16;
+//                                break;
                             default:
                                 break;
                         }

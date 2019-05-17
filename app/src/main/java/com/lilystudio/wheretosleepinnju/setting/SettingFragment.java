@@ -72,9 +72,9 @@ public class SettingFragment extends PreferenceFragment implements SettingContra
         } else if (title.equals(getString(R.string.hide_fab))) {
 //            ((BaseActivity) getActivity()).notifiUpdateMainPage(Constant.INTENT_UPDATE_TYPE_OTHER);
             return true;
-        } else if (title.equals(getString(R.string.show_noon_course))) {
+//        } else if (title.equals(getString(R.string.show_noon_course))) {
 //            ((BaseActivity) getActivity()).notifiUpdateMainPage(Constant.INTENT_UPDATE_TYPE_COURSE);
-            return true;
+//            return true;
         } else if (title.equals(getString(R.string.about))) {
 //            ((SettingActivity) getActivity()).addAboutFragment();
             return true;

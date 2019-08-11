@@ -56,13 +56,14 @@ public class ImptActivity extends BaseActivity implements
     }
 
     private String initSchoolUrl() {
-        Intent intent = getIntent();
-        String schoolUrl = intent.getStringExtra(Constant.INTENT_SCHOOL_URL);
-        if (TextUtils.isEmpty(schoolUrl)) {
-            schoolUrl = Url.URL_NJU_HOST;
-        }
-        schoolUrl = schoolUrl.replace(Url.default2, "");
-        return schoolUrl;
+//        Intent intent = getIntent();
+//        String schoolUrl = intent.getStringExtra(Constant.INTENT_SCHOOL_URL);
+//        if (TextUtils.isEmpty(schoolUrl)) {
+//            String schoolUrl = Url.URL_NJU_HOST;
+//        }
+//        schoolUrl = schoolUrl.replace(Url.default2, "");
+//        return schoolUrl;
+        return Url.URL_NJU_HOST;
     }
 
     private void initView() {

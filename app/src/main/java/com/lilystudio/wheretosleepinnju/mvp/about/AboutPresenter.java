@@ -1,14 +1,6 @@
 package com.lilystudio.wheretosleepinnju.mvp.about;
 import com.tencent.bugly.beta.Beta;
 
-import com.lilystudio.wheretosleepinnju.R;
-import com.lilystudio.wheretosleepinnju.app.app;
-import com.lilystudio.wheretosleepinnju.data.beanv2.VersionWrapper;
-import com.lilystudio.wheretosleepinnju.data.http.HttpCallback;
-import com.lilystudio.wheretosleepinnju.utils.LogUtil;
-import com.lilystudio.wheretosleepinnju.utils.ToastUtils;
-import com.lilystudio.wheretosleepinnju.utils.spec.VersionUpdate;
-
 /**
  * Created by xxyangyoulin on 2018/3/13.
  */

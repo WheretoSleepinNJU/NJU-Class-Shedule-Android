@@ -6,8 +6,8 @@ android {
         applicationId "com.lilystudio.wheretosleepinnju"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 6
-        versionName "0.2.2"
+        versionCode 7
+        versionName "0.2.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,7 +25,7 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.3'
 }
 //
 dependencies {

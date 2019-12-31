@@ -103,6 +103,17 @@
             <include layout="@layout/layout_add_time_item" />
 
             <Button
+                android:id="@+id/btn_add_time_slot"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_svg_add_time_slot" />
+
+
+
+            <Button
                 android:id="@+id/btn_remove"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -115,6 +126,7 @@
                 android:textSize="16sp"
                 android:visibility="gone"
                 tools:visibility="visible" />
+
 
         </LinearLayout>
     </ScrollView>

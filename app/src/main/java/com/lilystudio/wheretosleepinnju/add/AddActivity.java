@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.lilystudio.wheretosleepinnju.BaseActivity;
 import com.lilystudio.wheretosleepinnju.R;
@@ -23,6 +25,9 @@ import com.lilystudio.wheretosleepinnju.utils.LogUtil;
 import com.lilystudio.wheretosleepinnju.utils.Preferences;
 import com.lilystudio.wheretosleepinnju.utils.spec.PopupWindowDialog;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class AddActivity extends BaseActivity implements AddContract.View, View.OnClickListener {
 
@@ -31,6 +36,8 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
     private EditText mEtName;
     private AutoCompleteTextViewLayout mAtCompTVClassroom;
     private EditTextLayout mEtlTeacher;
+    private LinearLayout mLLTime;
+    private Button mBtnAddTimeSlot;
     private EditTextLayout mEtlTime;
     private EditTextLayout mEtlWeekRange;
 
@@ -106,13 +113,17 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
         mAtCompTVClassroom.setDropDownVerticalOffset(2);
 
         mEtlTeacher = findViewById(R.id.etl_teacher);
-        mEtlTime = findViewById(R.id.etl_time);
+        mLLTime=findViewById(R.id.ll_time);
+        addTimeSlot();
+//        mEtlTime = findViewById(R.id.etl_time);
         mEtlWeekRange = findViewById(R.id.etl_week_range);
+        mBtnAddTimeSlot =findViewById(R.id.btn_add_time_slot);
 
         mBtnRemove = findViewById(R.id.btn_remove);
 
-        mEtlTime.setOnClickListener(this);
+//        mEtlTime.setOnClickListener(this);
         mEtlWeekRange.setOnClickListener(this);
+        mBtnAddTimeSlot.setOnClickListener(this);
 
         mBtnRemove.setOnClickListener(this);
     }
@@ -130,12 +141,53 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
                 finish();
                 break;
             case R.id.action_add:
-                add();
+                addAll();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    private void addAll(){
+        for(int i=0;i<mLLTime.getChildCount();i++){
+            parseStr(((EditTextLayout)mLLTime.getChildAt(i).findViewById(R.id.etl_time)).getText());
+            add();
+            isEditMode=false;//防止多次添加
+        }
+        finish();
+    }
+
+    private void parseStr(String str){
+        switch (str.charAt(1)){
+            case '一':
+                mSelectedWeek=1;
+                break;
+            case '二':
+                mSelectedWeek=2;
+                break;
+            case '三':
+                mSelectedWeek=3;
+                break;
+            case '四':
+                mSelectedWeek=4;
+                break;
+            case '五':
+                mSelectedWeek=5;
+                break;
+            case '六':
+                mSelectedWeek=6;
+                break;
+            case '日':
+                mSelectedWeek=7;
+                break;
+        }
+
+        Pattern p=Pattern.compile("[0-9]+");
+        Matcher matcher=p.matcher(str);
+        matcher.find();
+        mSelectedNodeStart=Integer.parseInt(matcher.group());
+        mSelectedNodeEnd= matcher.find()? Integer.parseInt(matcher.group()):mSelectedNodeStart;
+
+    }
 
     private void add() {
         Course course = new Course();
@@ -175,14 +227,52 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.etl_time:
+                mEtlTime=v.findViewById(R.id.etl_time);
                 timeAction();
+                break;
+            case R.id.iv_clear:
+                mLLTime.removeViewAt((int)v.getTag());
+                fresh();
                 break;
             case R.id.etl_week_range:
                 rangeAction();
                 break;
+            case R.id.btn_add_time_slot:
+                addTimeSlot();
+                break;
             case R.id.btn_remove:
                 remove();
                 break;
+        }
+    }
+
+    private void addTimeSlot() {
+        View timeIntervalView=View.inflate(this,R.layout.layout_time_slot,null);
+        mEtlTime=timeIntervalView.findViewById(R.id.etl_time);
+        mEtlTime.setOnClickListener(this);
+        if(mLLTime.getChildCount()!=0){
+            mEtlTime.getIvClear().setVisibility(View.VISIBLE);
+            mEtlTime.getIvClear().setTag(mLLTime.getChildCount());
+            mEtlTime.getIvClear().setOnClickListener(this);
+        }
+        mSelectedWeek=1;
+        mSelectedNodeStart=1;
+        mSelectedNodeEnd=2;
+        updateWeekNode();
+        mLLTime.addView(timeIntervalView);
+    }
+
+    private void fresh(){
+        for(int i=0;i<mLLTime.getChildCount();i++){
+            ImageView ivClear=((EditTextLayout)mLLTime.getChildAt(i).findViewById(R.id.etl_time)).getIvClear();
+            if(i==0){
+                ivClear.setVisibility(View.INVISIBLE);
+            }
+            else{
+                ivClear.setVisibility(View.VISIBLE);
+                ivClear.setTag(i);
+                ivClear.setOnClickListener(this);
+            }
         }
     }
 
@@ -259,7 +349,7 @@ public class AddActivity extends BaseActivity implements AddContract.View, View.
     public void onAddSucceed(Course course) {
         toast("【" + course.getName() + "】" + getString(R.string.add_succeed));
         notifiUpdateMainPage(Constant.INTENT_UPDATE_TYPE_COURSE);
-        finish();
+//        finish();
     }
 
     @Override
